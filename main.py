@@ -1,14 +1,11 @@
 def q1(cidades):
     resultado = []
-
     for nome in cidades:
         if cidades[nome] > 100:
             resultado.append(nome)
     return resultado
 
-
 def q2(lista1, lista2):
-
     numeros = []
     for n in lista1 + lista2:
         if n > 0:
@@ -18,16 +15,15 @@ def q2(lista1, lista2):
     return (soma, numeros)
 
 def q3():
-    
     valores = []
     while True:
-        n = int(input("Digite um número (0 para sair): "))
+        n = int(input("Digite um nº: (Digite 0 para sair): "))
         if n == 0:
             break
         valores.append(n)
     return valores
 
-def processa_lista(lista):
+def processar_lista(lista):
     pares = []
     impares = []
     for num in lista:
@@ -40,11 +36,11 @@ def processa_lista(lista):
 def q4ler_altura():
     alturas = []
     for i in range(3):
-        altura = float(input("Digite a altura: "))
+        altura = float(input("Digite uma altura: "))
         alturas.append(altura)
     return alturas
 
-def organizar_alturas(lista):
+def org_alturas(lista):
     lista_ordenada = sorted(lista)
     return [lista_ordenada[1], lista_ordenada[2], lista_ordenada[0]]
 
@@ -55,7 +51,6 @@ def formatar_alturas(lista):
     return lista_formatada
 
 def main():
-    # Teste as questões que você desenvolveu manualmente:
     # Q 1
     idades = {
         "João Pessoa": 432,
@@ -78,17 +73,15 @@ def main():
 
     #  3
     valores = q3()
-    pares, impares = processa_lista(valores)
+    pares, impares = processar_lista(valores)
     print("Q3 - Pares:", pares)
     print("Q3 - Ímpares:", impares)
 
     # Q 4
     alturas = q4ler_altura()
-    organizadas = organizar_alturas(alturas)
+    organizadas = org_alturas(alturas)
     formatadas = formatar_alturas(organizadas)
     print("Q4:", formatadas)
 
 if __name__ == "__main__":
     main()
-
-    #q1
